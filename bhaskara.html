@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Calculadora de Bhaskara</title>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<script type="text/javascript">
+
+			function calcularBhaskara(){
+
+				var a = document.getElementById('a').value;
+				var b = document.getElementById('b').value;
+				var c = document.getElementById('c').value;
+
+				if ( a == '' || a == null) {
+					alert("Favor inserir um numero para A");
+					return false;
+				}
+
+				if ( b == '' || b == null) {
+					alert("Favor inserir um numero para B");
+					return false;
+				}
+
+				if ( c == '' || c == null) {
+					alert("Favor inserir um numero para C");
+					return false;
+				}
+
+				a = parseFloat(a);
+				b = parseFloat(b);
+				c = parseFloat(c);
+
+				var delta = (b * b) -4 * a * c;
+
+				document.getElementById('delta').value = delta;
+
+				if(delta < 0){
+					alert("Não é possivel realizar a raiz quadrada de numeros negativo");
+				}
+
+				var x1 = ( -b + Math.sqrt(delta)) / (2 * a);
+				var x2 = ( -b - Math.sqrt(delta)) / (2 * a);
+
+				document.getElementById('x1').value = x1;
+				document.getElementById('x2').value = x2;
+
+			}
+
+
+
+		</script>
+
+
+	</head>
+
+	<body>
+		
+		<div style="background-color: #0980" class="container">
+
+			<div style="background-color: #0982"  class="jumbotron">
+				
+				<h1>Calculadora de Bhaskara</h1> 	
+
+			</div>
+
+			
+		 <div class="row">		 	
+			
+			<div class="col-md-4"><input id="a" type="text" class="form-control" placeholder="Entre com o valor para A"></div>
+
+			<div class="col-md-4"><input id="b" type="text" class="form-control" placeholder="Entre com o valor para B"></div>
+
+			<div class="col-md-4"><input id="c" type="text" class="form-control" placeholder="Entre com o valor para C"></div>
+
+		 </div>
+
+		 <hr>
+
+         <div class="row">	
+		 
+		 	
+		 	<div class="col-md-4">Valor do Delta: <input id="delta" type="text" class="form-control" readonly> </div>
+
+		 	<div class="col-md-4">Valor do X1: <input id="x1" type="text" class="form-control" readonly> </div>
+
+		 	<div class="col-md-4">Valor do X2: <input id="x2" type="text" class="form-control" readonly> </div>
+		 			 
+
+		 </div>
+
+		 <hr>
+
+		 <div class="row">
+				<div class="col-md-4"></div>
+
+				<div class="col-md-2"> <button type="button" class="btn btn-lg btn-primary pull-right" onclick="calcularBhaskara()">Calcular</button> </div>
+
+				<div class="col-md-4"></div>
+
+	    </div>
+
+
+	</body>
+</html>
