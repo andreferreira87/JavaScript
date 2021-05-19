@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Calculadora de Bhaskara</title>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<script src="Bhaskara.js"></script>
+
+
+	</head>
+
+	<body>
+		
+		<div style="background-color: #0980" class="container">
+
+			<div style="background-color: #0982"  class="jumbotron">
+				
+				<h1>Calculadora de Bhaskara</h1> 	
+
+			</div>
+
+			
+		 <div class="row">		 	
+			
+			<div class="col-md-4"><input id="a" type="text" class="form-control" placeholder="Entre com o valor para A"></div>
+
+			<div class="col-md-4"><input id="b" type="text" class="form-control" placeholder="Entre com o valor para B"></div>
+
+			<div class="col-md-4"><input id="c" type="text" class="form-control" placeholder="Entre com o valor para C"></div>
+
+		 </div>
+
+		 <hr>
+
+         <div class="row">	
+		 
+		 	
+		 	<div class="col-md-4">Valor do Delta: <input id="delta" type="text" class="form-control" readonly> </div>
+
+		 	<div class="col-md-4">Valor do X1: <input id="x1" type="text" class="form-control" readonly> </div>
+
+		 	<div class="col-md-4">Valor do X2: <input id="x2" type="text" class="form-control" readonly> </div>
+		 			 
+
+		 </div>
+
+		 <hr>
+
+		 <div class="row">
+				<div class="col-md-4"></div>
+
+				<div class="col-md-2"> <button type="button" class="btn btn-lg btn-primary pull-right" onclick="calcularBhaskara()">Calcular</button> </div>
+
+				<div class="col-md-4"></div>
+
+	    </div>
+
+
+	</body>
+</html>
